@@ -47,8 +47,7 @@
         }
 
         .backdrop {
-    background-image: url('images/gold.png');
-    background-color: #180138; /* Fallback color */
+    background-image: url('images/gold.png'); /* Ensure the path is correct */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -59,6 +58,7 @@
     align-items: center;
     z-index: 1;
 }
+
 
         header {
             text-align: center;
@@ -71,7 +71,7 @@
             font-family: 'Great Vibes', cursive;
             font-size: 5rem;
             margin: 0;
-            color: #a07c1b;
+            color: #9b59b6;
             text-shadow: 0 0 10px rgba(155, 89, 182, 0.8), 0 0 20px rgba(155, 89, 182, 0.6), 0 0 30px rgba(155, 89, 182, 0.4);
             animation: glow 1.5s ease-in-out infinite alternate;
         }
@@ -213,6 +213,15 @@
 </head>
 <body>
 
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
 <div class="backdrop" id="home">
     <header>
         <h1>Expressions in Elegance</h1>
@@ -243,10 +252,10 @@
     </div>
 </footer>
 
-
+<!-- Music toggle button -->
+<div id="music-toggle">
+    <i class="fas fa-music"></i>
 </div>
 
 </body>
 </html>
-
-

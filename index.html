@@ -231,26 +231,6 @@
         <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
     </div>
 </footer>
-
-<!-- Background Music -->
-<audio id="background-music" loop>
-    <source src="path/to/your/music-file.mp3" type="audio/mpeg">
-</audio>
-<button id="music-toggle">🎶</button>
-
-<script>
-    const music = document.getElementById('background-music');
-    const toggleBtn = document.getElementById('music-toggle');
-
-    toggleBtn.addEventListener('click', () => {
-        if (music.paused) {
-            music.play();
-            toggleBtn.textContent = '🔇'; // Change button to mute icon
-        } else {
-            music.pause();
-            toggleBtn.textContent = '🎶'; // Change back to play icon
-        }
-    });
 </script>
 
 </body>

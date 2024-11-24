@@ -13,14 +13,11 @@
             margin: 0;
             padding: 0;
             font-family: 'Bubblegum Sans', cursive;
-            background: linear-gradient(135deg, #180138, #deaffc);
+            background-color: #180138;
             color: #ffffff;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            position: relative;
-            background-size: cover;
-            background-position: center;
         }
 
         /* Smooth scrolling */
@@ -62,17 +59,20 @@
         }
 
         .backdrop {
-            background: url('C:/Users/Kanth/Pictures/Screenshots/gold.png') no-repeat center center/cover;
-            padding-top: 60px;
-            flex: 1;
-        }
-
-        header {
-            height: 100vh;
+            background-image: url('C:/Users/Kanth/Pictures/Screenshots/gold.png'); /* Make sure the path is correct */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
             z-index: 2;
             opacity: 0;
             animation: fadeIn 1.5s forwards;
@@ -263,6 +263,12 @@
     </div>
 </footer>
 
+<!-- Music toggle button -->
+<div id="music-toggle">
+    <i class="fas fa-music"></i>
+</div>
+
 </body>
 </html>
+
 

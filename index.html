@@ -13,11 +13,12 @@
             margin: 0;
             padding: 0;
             font-family: 'Bubblegum Sans', cursive;
-            background-color: #180138;
+            background: linear-gradient(135deg, #180138, #deaffc);
             color: #ffffff;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            position: relative;
         }
 
         /* Smooth scrolling */
@@ -59,7 +60,7 @@
         }
 
         .backdrop {
-            background: url('gold.png') no-repeat center center/cover;
+            background-image: url('images/gold.png'); /* Ensure the correct image path */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -69,83 +70,6 @@
             justify-content: center;
             align-items: center;
             z-index: 1;
-        }
-
-        header {
-            text-align: center;
-            z-index: 2;
-            opacity: 0;
-            animation: fadeIn 1.5s forwards;
-        }
-
-        header h1 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 5rem;
-            margin: 0;
-            color: #9b59b6;
-            text-shadow: 0 0 10px rgba(155, 89, 182, 0.8), 0 0 20px rgba(155, 89, 182, 0.6), 0 0 30px rgba(155, 89, 182, 0.4);
-            animation: glow 1.5s ease-in-out infinite alternate;
-        }
-
-        header p {
-            font-size: 1.8rem;
-            color: #d1b203;
-            text-shadow: 0 0 5px rgba(177, 97, 243, 0.911), 0 0 10px rgba(150, 23, 209, 0.6), 0 0 15px rgba(85, 4, 133, 0.856);
-            opacity: 0;
-            animation: fadeIn 1.5s forwards;
-            animation-delay: 0.5s;
-        }
-
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            padding: 30px;
-            margin: 0 auto;
-            max-width: 1200px;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 2;
-        }
-
-        .gallery figure {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: slideIn 0.5s forwards;
-            animation-delay: 0.5s;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            border: 5px solid #ffd700;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.8);
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         footer {
@@ -172,84 +96,18 @@
         .social-icons a:hover {
             color: #ffd700;
         }
-
-        #music-toggle {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            color: #333;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-            font-size: 1.5rem;
-            z-index: 1000;
-            transition: background-color 0.3s;
-        }
-
-        #music-toggle:hover {
-            background-color: #ffd700;
-        }
-
-        /* For screens less than 768px wide */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column; /* Stack menu items vertically */
-                gap: 10px;
-            }
-
-            nav a {
-                font-size: 1rem; /* Smaller text size for navigation */
-            }
-
-            header h1 {
-                font-size: 3rem; /* Smaller heading on mobile */
-            }
-
-            header p {
-                font-size: 1.2rem; /* Smaller subheading */
-            }
-
-            .gallery {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .gallery figure {
-                width: 100%; /* Ensure images take up full width */
-            }
-        }
     </style>
 </head>
 <body>
 
 <nav>
     <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
-<div class="backdrop" id="home">
-    <header>
-        <h1>Expressions in Elegance</h1>
-        <p>A Journey Through Visionary Brilliance</p>
-    </header>
-
-    <div class="gallery" id="gallery">
-        <figure>
-            <img src="Isagi.jpg" alt="Isagi-Bluelock">
-            <figcaption>Isagi - Blue Lock</figcaption>
-        </figure>
-        <figure>
-            <img src="jun.png" alt="Gojo-JJK">
-            <figcaption>Gojo - JJK</figcaption>
-        </figure>
-    </div>
-</div>
+<!-- Removed the header and gallery sections -->
 
 <footer>
     <p>&copy; 2024 Expressions in Elegance | Created by Agastya K</p>
@@ -263,12 +121,8 @@
     </div>
 </footer>
 
-<!-- Music toggle button -->
-<div id="music-toggle">
-    <i class="fas fa-music"></i>
-</div>
-
 </body>
 </html>
+
 
 

@@ -25,7 +25,19 @@
             scroll-behavior: smooth;
         }
 
-        
+        /* Navigation Menu */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(30, 30, 30, 0.8);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            z-index: 3;
+        }
 
         nav ul {
             list-style: none;
@@ -47,18 +59,17 @@
         }
 
         .backdrop {
-    background-image: url('images/gold.png'); /* Ensure the path is correct */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
+            background-image: url('images/gold.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
 
         header {
             text-align: center;

@@ -95,32 +95,32 @@
         .gallery {
     display: flex;
     flex-direction: column; /* Stack items vertically */
-    gap: 30px;
+    gap: 40px; /* Increase spacing between images */
     padding: 30px;
-    max-width: 800px; /* Limit the width for better presentation */
+    max-width: 1000px; /* Increase gallery width */
     margin: 0 auto;
 }
 
 .gallery figure {
-    width: 100%; /* Ensure images take full width */
-    box-sizing: border-box;
+    width: 100%;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .gallery img {
     width: 100%;
+    max-width: 900px; /* Limit max width of each image */
     height: auto;
     border-radius: 10px;
     border: 5px solid #ffd700;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.8);
+}
 
-
-        .gallery img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.8);
-        }
 
         /* Footer */
         footer {

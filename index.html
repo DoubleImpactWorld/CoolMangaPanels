@@ -55,17 +55,19 @@
         }
 
         /* Backdrop */
-        .backdrop {
-    background-image: url('goldnew.png'); /* Adjust path if necessary */
+       .backdrop {
+    background-image: url('goldnew.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* This makes the background stay in place */
-    height: 100vh;
+    background-attachment: fixed;
+    min-height: 100vh; /* Changed to min-height for better content scaling */
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px; /* Added padding to ensure spacing */
     z-index: 1;
 }
 
@@ -91,27 +93,29 @@
 
         /* Gallery */
         .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            padding: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-            z-index: 1;
-        }
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
 
-        .gallery figure {
-            width: 45%;
-        }
+.gallery figure {
+    flex: 1 1 45%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
 
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            border: 5px solid #ffd700;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid #ffd700;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
 
         .gallery img:hover {
             transform: scale(1.1);

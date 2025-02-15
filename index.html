@@ -18,12 +18,14 @@
   <!-- End Google Analytics Tracking Code -->
 
   <style>
+    /* Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    /* Apply fixed background to the body so it covers the whole page */
     body, html {
       height: 100%;
       width: 100%;
@@ -31,7 +33,8 @@
       color: #ffffff;
       overflow-x: hidden;
       scroll-behavior: smooth;
-      background: #180138;
+      background: url('goldnew.png') no-repeat center center fixed;
+      background-size: cover;
     }
 
     /* Navigation Menu */
@@ -64,24 +67,22 @@
       color: #ffd700;
     }
 
-    /* Backdrop */
+    /* Backdrop Container - no background here, so the body’s background shows through */
     .backdrop {
-      background-image: url('goldnew.png'); /* Adjust this path if needed */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      height: 100vh;
+      min-height: 100vh;
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 20px;
       z-index: 1;
     }
 
+    /* Header Styles */
     header {
       text-align: center;
-      padding-top: 150px;
+      padding-top: 150px; /* space to account for nav */
       z-index: 2;
     }
 
@@ -102,7 +103,7 @@
                    0 0 15px rgba(85, 4, 133, 0.856);
     }
 
-    /* Gallery */
+    /* Gallery - stacked vertically */
     .gallery {
       display: flex;
       flex-direction: column;
@@ -214,7 +215,7 @@
     </ul>
   </nav>
 
-  <!-- Backdrop with header and gallery -->
+  <!-- Backdrop Container: The content goes here; the fixed background is applied to the body -->
   <div class="backdrop" id="home">
     <header>
       <h1>Expressions in Elegance</h1>
@@ -248,4 +249,3 @@
   </div>
 </body>
 </html>
-

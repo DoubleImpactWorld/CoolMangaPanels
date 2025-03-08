@@ -1,124 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expressions in Elegance</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Great+Vibes&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2EXM8T5L0C"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-2EXM8T5L0C');
-    </script>
     <style>
-        /* Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        html {
+
+        body, html {
             height: 100%;
-        }
-        /* The body gets a fixed, full-page background */
-        body {
-            min-height: 100%;
+            width: 100%;
             font-family: 'Bubblegum Sans', cursive;
-            color: #fff;
+            color: #ffffff;
             overflow-x: hidden;
             scroll-behavior: smooth;
-            background: url('goldnew.png') no-repeat center center fixed;
-            background-size: cover;
-            margin: 0;
+            background: #180138;
         }
-        /* Navigation */
+
+        /* Navigation Menu */
         nav {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            background: rgba(30,30,30,0.8);
+            right: 0;
+            background-color: rgba(30, 30, 30, 0.8);
             padding: 15px;
-            z-index: 100;
+            display: flex;
+            justify-content: center;
+            z-index: 10;
         }
+
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: center;
             gap: 20px;
         }
+
         nav a {
             text-decoration: none;
-            color: #fff;
+            color: #ffffff;
             font-size: 1.2rem;
             transition: color 0.3s;
         }
+
         nav a:hover {
             color: #ffd700;
         }
-        /* Main content container */
-        .main-container {
-            position: relative;
-            z-index: 1;
-            padding-top: 80px;
-            text-align: center;
+
+        /* Backdrop */
+        .backdrop {
+            background: url('goldnew.png') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        /* Header styles */
+
         header {
-            margin: 50px 0;
+            text-align: center;
+            padding-top: 150px;
+            z-index: 2;
         }
+
         header h1 {
             font-family: 'Great Vibes', cursive;
             font-size: 5rem;
             color: #9b59b6;
-            text-shadow: 0 0 10px rgba(155,89,182,0.8),
-                        0 0 20px rgba(155,89,182,0.6),
-                        0 0 30px rgba(155,89,182,0.4);
+            text-shadow: 0 0 10px rgba(155, 89, 182, 0.8), 0 0 20px rgba(155, 89, 182, 0.6), 0 0 30px rgba(155, 89, 182, 0.4);
         }
+
         header p {
             font-size: 1.8rem;
             color: #d1b203;
-            text-shadow: 0 0 5px rgba(177,97,243,0.911),
-                        0 0 10px rgba(150,23,209,0.6),
-                        0 0 15px rgba(85,4,133,0.856);
+            text-shadow: 0 0 5px rgba(177, 97, 243, 0.911), 0 0 10px rgba(150, 23, 209, 0.6), 0 0 15px rgba(85, 4, 133, 0.856);
         }
-        /* Gallery - stacked vertically */
+
+        /* Gallery */
         .gallery {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
+            justify-content: center;
+            gap: 15px;
             padding: 30px;
             max-width: 1200px;
             margin: 0 auto;
+            flex-wrap: wrap;
+            z-index: 1;
         }
+
         .gallery figure {
-            width: 100%;
-            text-align: center;
+            width: 45%;
         }
+
         .gallery img {
             width: 100%;
-            max-width: 1000px;
             height: auto;
             border-radius: 10px;
             border: 5px solid #ffd700;
             transition: transform 0.3s, box-shadow 0.3s;
         }
+
         .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(255,215,0,0.8);
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.8);
         }
+
         /* Footer */
         footer {
             text-align: center;
             padding: 20px;
-            background: rgba(0,0,0,0.7);
+            background-color: rgba(0, 0, 0, 0.7);
         }
+
         /* Social Icons */
         .social-icons {
             margin-top: 20px;
@@ -126,13 +128,34 @@
             justify-content: center;
             gap: 10px;
         }
+
         .social-icons a {
             color: #ffd700;
             font-size: 1.8rem;
             transition: color 0.3s;
         }
+
         .social-icons a:hover {
             color: #ff4500;
+        }
+
+        /* Music Toggle Button */
+        #music-toggle {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            font-size: 1.5rem;
+            z-index: 1000;
+        }
+
+        #music-toggle:hover {
+            background-color: #ffd700;
         }
 
         /* Mobile styles */
@@ -141,58 +164,27 @@
                 flex-direction: column;
                 gap: 10px;
             }
+
             nav a {
                 font-size: 1rem;
             }
+
             header h1 {
                 font-size: 3rem;
             }
+
             header p {
                 font-size: 1.2rem;
             }
+
             .gallery figure {
                 width: 100%;
             }
         }
-        .about-section, .contact-section {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-        }
-        .about-section h2, .contact-section h2{
-            margin-bottom: 20px;
-            color: #ffd700;
-        }
-        .fade-in {
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        .fade-in.loaded{
-            opacity: 1;
-        }
-        #scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            color: #333;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-            font-size: 1.5rem;
-            z-index: 1000;
-            display: none;
-        }
-        #scroll-to-top:hover {
-            background-color: #ffd700;
-        }
-
     </style>
 </head>
 <body>
+
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -202,19 +194,38 @@
         </ul>
     </nav>
 
-    <div class="main-container fade-in" id="home">
+    <div class="backdrop" id="home">
         <header>
             <h1>Expressions in Elegance</h1>
             <p>A Journey Through Visionary Brilliance</p>
         </header>
     </div>
-
-    <div class="main-container fade-in" id="gallery">
-        <div class="gallery">
+        <div class="gallery" id="gallery">
             <figure>
                 <img src="Isagi.jpg" alt="Isagi-Bluelock">
                 <figcaption>Isagi - Blue Lock</figcaption>
             </figure>
             <figure>
                 <img src="jun.png" alt="Gojo-JJK">
-                <figcaption>
+                <figcaption>Gojo - JJK</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Expressions in Elegance | Created by Agastya K</p>
+
+        <div class="social-icons">
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://spotify.com" target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <div id="music-toggle">
+        <i class="fas fa-music"></i>
+    </div>
+
+</body>
+</html>

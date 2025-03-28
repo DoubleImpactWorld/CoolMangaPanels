@@ -21,8 +21,8 @@
             color: #ffffff;
             overflow-x: hidden;
             scroll-behavior: smooth;
-            background: #180138 url('goldnew.png') no-repeat center center fixed; /* Added background image here */
-            background-size: cover; /* Ensure the image covers the entire viewport */
+            background: #180138 url('goldnew.png') no-repeat center center fixed; /* Background image is goldnew.png */
+            background-size: cover;
         }
 
         /* Navigation Menu */
@@ -59,7 +59,7 @@
             text-align: center;
             padding-top: 150px;
             z-index: 2;
-            position: relative; /* Added position relative */
+            position: relative;
         }
 
         header h1 {
@@ -93,6 +93,7 @@
 
         .gallery img {
             width: 100%;
+            max-width: 600px; /* Added max-width */
             height: auto;
             border-radius: 10px;
             border: 5px solid #ffd700;
@@ -131,21 +132,7 @@
 
         /* Music Toggle Button */
         #music-toggle {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            color: #333;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-            font-size: 1.5rem;
-            z-index: 1000;
-        }
-
-        #music-toggle:hover {
-            background-color: #ffd700;
+            display: none; /* Hide the music toggle button using CSS */
         }
 
         /* Mobile styles */
@@ -213,10 +200,6 @@
             </a>
         </div>
     </footer>
-
-    <div id="music-toggle">
-        <i class="fas fa-music"></i>
-    </div>
 
 </body>
 </html>

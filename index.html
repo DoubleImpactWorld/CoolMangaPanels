@@ -21,7 +21,8 @@
             color: #ffffff;
             overflow-x: hidden;
             scroll-behavior: smooth;
-            background: #180138;
+            background: #180138 url('goldnew.png') no-repeat center center fixed; /* Added background image here */
+            background-size: cover; /* Ensure the image covers the entire viewport */
         }
 
         /* Navigation Menu */
@@ -54,22 +55,11 @@
             color: #ffd700;
         }
 
-        /* Backdrop */
-        .backdrop {
-            background: url('goldnew.png') no-repeat center center fixed;
-            background-size: cover;
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
         header {
             text-align: center;
             padding-top: 150px;
             z-index: 2;
+            position: relative; /* Added position relative */
         }
 
         header h1 {
@@ -194,22 +184,20 @@
         </ul>
     </nav>
 
-    <div class="backdrop" id="home">
-        <header>
-            <h1>Expressions in Elegance</h1>
-            <p>A Journey Through Visionary Brilliance</p>
-        </header>
-  </div>
-        <div class="gallery" id="gallery" style="display: grid; grid-template-columns: 1fr;">
-            <figure>
-                <img src="Isagi.jpg" alt="Isagi-Bluelock">
-                <figcaption>Isagi - Blue Lock</figcaption>
-            </figure>
-            <figure>
-                <img src="jun.png" alt="Gojo-JJK">
-                <figcaption>Gojo - JJK</figcaption>
-            </figure>
-        </div>
+    <header style="text-align: center; padding-top: 150px; z-index: 2; position: relative;">
+        <h1>Expressions in Elegance</h1>
+        <p>A Journey Through Visionary Brilliance</p>
+    </header>
+
+    <div class="gallery" id="gallery" style="display: grid; grid-template-columns: 1fr;">
+        <figure>
+            <img src="Isagi.jpg" alt="Isagi-Bluelock">
+            <figcaption>Isagi - Blue Lock</figcaption>
+        </figure>
+        <figure>
+            <img src="jun.png" alt="Gojo-JJK">
+            <figcaption>Gojo - JJK</figcaption>
+        </figure>
     </div>
 
     <footer>
